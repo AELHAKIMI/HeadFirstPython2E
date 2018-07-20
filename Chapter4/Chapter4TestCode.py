@@ -10,7 +10,7 @@ print(search4vowels('sky'))
 
 """ Second Test """
 
-def search4vowels(word):
+def search4vowels2(word):
     """Return any vowels found in a supplied word."""
     vowels = set('aeiou')
     return vowels.intersection(set(word))
@@ -21,7 +21,7 @@ print(found)
 
 """ Third Test : Annotations PEP 3107 """
 
-def search4vowels(word:str) -> set:
+def search4vowels3(word:str) -> set:
     """ Return any vowels found in a supplied word."""
     vowels = set('aeiou')
     return vowels.intersection(set(word))
@@ -29,6 +29,3 @@ found = search4vowels('ayoub')
 print(found)
 found = search4vowels('Sky')
 print(found)
-
-
-
