@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2> {{ the_title }} </h2>
+
+<p> You submited the followinfg data:</p>
+<table>
+    <tr> <td>Phrase:</td> <td> {{ the_phrase }} </td></tr>
+    <tr> <td>letters:</td> <td> {{ the_letters}} </td></tr>
+</table>
+<p> when " {{ the_phrase }}" is search for "{{ the_letters}}", the folowing results are returned:</p>
+<h3>{{ the_ressults}}</h3>
+
+{% endblock %}

@@ -12,6 +12,4 @@ def do_search() ->str:
     found = vsearch.search4letters("life, the universe, and everything!", 'eiru,!')
     return str(found)
 
-
-
 app.run()
