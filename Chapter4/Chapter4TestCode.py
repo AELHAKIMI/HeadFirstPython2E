@@ -29,3 +29,16 @@ found = search4vowels('ayoub')
 print(found)
 found = search4vowels('Sky')
 print(found)
+
+""" Fourth Test : Data Passed by reference or by value"""
+
+def double(arg):
+    print('Before: ', arg)
+    arg *= arg
+    print('After: ', arg)
+
+def change(arg):
+    print('Before: ', arg)
+    arg.append('More data')
+    print('After: ', arg)
+
