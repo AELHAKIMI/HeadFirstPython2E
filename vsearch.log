@@ -1,0 +1,2 @@
+request : elhakimi aeiou results:  {'e', 'a', 'i'}
+request : <Request 'http://127.0.0.1:5000/search4' [POST]> results:  {'u', 'o', 'i', 'e', 'a'}
