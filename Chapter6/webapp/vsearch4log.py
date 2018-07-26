@@ -27,13 +27,22 @@ def entry_page() -> 'html':
 
 def log_request(req:'flask_request', res:str) -> None:
     with open('vsearch.log', 'a') as log_vsearch:
-        print( req, res, file=log_vsearch)
+        print( req.form, req.remote_addr, req.user_agent, res, file=log_vsearch, sep=' | ')
 
 @app.route('/viewlog')
-def view_the_log() -> str:    
+def view_the_log() -> 'html':
+    contents = []
     with open('vsearch.log') as log:
-        contents = log.read()
-    return escape(contents)    
+        for line in log:
+            contents.append([])
+            for item in line.split('|'):
+                contents[-1].append(escape(item))
+    titles = ('Form Data', 'Remote_addr', 'User_agent', 'Results')
+    return render_template('viewlog.html',
+                            the_title = 'View Log',
+                            the_row_titles = titles,
+                            the_data = contents,
+                            )   
     
 if __name__ == '__main__':
     app.run(debug=True)
