@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request, redirect, escape
+from mysql import connector
 from vsearch import search4letters
 
 app = Flask(__name__)
 # @app.route('/')
 # def hello() -> str:
 #     return  redirect('/entry')
+dbconfig = {'host' : '127.0.0.1',
+            'user' : 'vsearch',
+            'password' : 'vsearchpaswd',
+            'database' : 'vsearchlogDB',
+            }
+
+conn = connector.connect(**dbconfig)
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> 'html':
