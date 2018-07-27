@@ -1,3 +1,5 @@
 ImmutableMultiDict([('phrase', 'hit'), ('letters', 'ilk')]) | 127.0.0.1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 | {'i'}
 ImmutableMultiDict([('letters', 'best'), ('phrase', 'the best way to develop your self is reading')]) | 127.0.0.1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 | {'s', 'b', 't', 'e'}
 ImmutableMultiDict([('letters', 'aeiou'), ('phrase', 'elhakimi')]) | 127.0.0.1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 | {'i', 'e', 'a'}
+ImmutableMultiDict([('phrase', 'udyusdasd.adf;adf;akdjfa;kdjf;kfjafqjepriwperuwncv;cadlf;;afjwpeo'), ('letters', 'aeiou')]) | 127.0.0.1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 | {'i', 'u', 'a', 'e', 'o'}
+ImmutableMultiDict([('phrase', 'je parle pas francais'), ('letters', 'uidf')]) | 127.0.0.1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 | {'i', 'f'}
