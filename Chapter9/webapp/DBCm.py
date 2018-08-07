@@ -5,6 +5,7 @@ class UseDatabase:
         self.configuration = config
     
     def __enter__(self) -> 'cursor':
+        print("Enter")
         self.conn = mysql.connector.connect(**self.configuration)
         self.cursor = self.conn.cursor()
         return self.cursor
@@ -13,3 +14,5 @@ class UseDatabase:
         self.conn.commit()
         self.cursor.close()
         self.conn.close()
+        print("Exit")
+        
