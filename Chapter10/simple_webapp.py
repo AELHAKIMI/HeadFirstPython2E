@@ -14,10 +14,9 @@ def do_login() -> str:
 
 @app.route('/status')
 def check_status() -> str:
-    if 'logged_in' in session:
+    if check_logged_in():
         return 'you are currently logged in'
-    else:
-        return 'you are Not logged in'
+    return 'you are Not logged in'
 
 @app.route('/logout')
 def do_logout() -> str:
@@ -27,15 +26,26 @@ def do_logout() -> str:
 
 @app.route('/page1')
 def page1() -> str:
+    if not check_logged_in():
+        return 'you are Not logged in'
     return 'This is page 1.'
 
 @app.route('/page2')
 def page2() -> str:
+    if not check_logged_in():
+        return 'you are Not logged in'
     return 'This is page 2.'
 
 @app.route('/page3')
 def page3() -> str:
-    return 'This is page 3.'
+    if not check_logged_in():
+        return 'you are Not logged in'
+    return 'This is page 3.' + str(type(check_logged_in))
+
+def check_logged_in() -> bool:
+    if 'logged_in' in session:
+        return True
+    return False
 
 if __name__ == '__main__':
     app.run(debug=True)
